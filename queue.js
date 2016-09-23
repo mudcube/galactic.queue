@@ -1,4 +1,4 @@
-var emitter = require('galactic.emitter')
+require('galactic.emitter')
 
 function queue(items, handler, processes) {
 	handler || (handler = function (value) { return value })
@@ -12,7 +12,7 @@ function queue(items, handler, processes) {
 	var _keys = []
 	var _items = []
 
-	var _promise = emitter(new Promise((resolve, reject) => {
+	var _promise = Galactic.emitter(new Promise((resolve, reject) => {
 		_resolve = resolve
 		_reject = reject
 		queue.cancel = cancel
@@ -112,4 +112,3 @@ function queue(items, handler, processes) {
 
 global.Galactic || (global.Galactic = {})
 global.Galactic.queue = queue
-global.Galactic.emitter = emitter
