@@ -1,0 +1,12 @@
+{
+  "name": "galactic.queue",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "author": "Michael Deal <hello@galactic.ink> (https://galactic.ink)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mudcube/galactic.queue.git"
+  }
+}
