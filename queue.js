@@ -1,4 +1,5 @@
-module.exports = function (items, handler, processes) {
+function Queue(items, handler, processes) {
+	handler || (handler = function (value) { return value })
 	processes || (processes = 1)
 
 	var queue = {}
@@ -101,7 +102,7 @@ module.exports = function (items, handler, processes) {
 		_done = true
 		_reject({
 			name: 'cancel',
-			message,
+			message: message || 'No reason provided',
 			results: _results
 		})
 	}
@@ -233,4 +234,11 @@ function toEmitter(object) {
 		return object;
 	}
 	return EventEmitter(object);
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+	module.exports = Queue
+} else {
+	self.Galactic || (self.Galactic = {})
+	Galactic.queue = Queue
 }

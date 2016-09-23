@@ -2,7 +2,7 @@
   "name": "galactic.queue",
   "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "queue.js",
   "author": "Michael Deal <hello@galactic.ink> (https://galactic.ink)",
   "license": "MIT",
   "repository": {
