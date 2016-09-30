@@ -2,7 +2,7 @@
   "name": "galactic.queue",
   "version": "1.0.4",
   "description": "",
-  "main": "queue.js",
+  "main": "dist/queue.js",
   "author": "Michael Deal <hello@galactic.ink> (https://galactic.ink)",
   "license": "MIT",
   "repository": {
@@ -10,7 +10,8 @@
     "url": "git+https://github.com/mudcube/galactic.queue.git"
   },
   "scripts": {
-    "prepublish": "browserify queue.js -o dist/queue.js -t [ babelify --presets [ es2015 ] ]"
+    "build": "browserify queue.js -o dist/queue.js -t [ babelify --presets [ es2015 ] ]",
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "galactic.emitter": "^1.0.0"
